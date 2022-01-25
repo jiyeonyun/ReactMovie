@@ -1,20 +1,71 @@
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+button{
+    width: 50px;
+    margin-left: 5px;
+}
+
+body{
+    background: rgb(49, 50, 50);
+}
+/*Home*/
 .main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+
 }
 .movie{
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 2x0px;
 }
-img{
+.img_main{
     width: 230px;
 }
 .title_main{
     font-size: 15px;
     font-style: none;
-    color: black;
+    color: whitesmoke;
+    text-align: center;
 }
-a{
-    text-decoration: none;
-    color: black;
+.h1_main{
+    display: block;
+    text-align: center;
+    margin: 40px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+.btns_main{
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.p_main{
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+}
+.loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.loading_main{
+    display: block;
+    text-align: center;
+    font-size: 48px;
+    color: whitesmoke;
+}
+.loading img{
+    display: block;
+    text-align: center;
+    width: 80px;
 }
