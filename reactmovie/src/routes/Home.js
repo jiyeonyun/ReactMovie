@@ -26,7 +26,7 @@ function Home(){
           </div>
       ) : (
         <div>
-          <h1 className='h1_main'>🍿Movie recommend(rating 8.8⬆️)🎬</h1>
+          <h1 className='h1_main'>🍿Movie recommend(rating {raiting}⬆️)🎬</h1>
           <div className='btns_main'>
             <p className='p_main'>change raiting!</p>
             <button onClick={()=>{
