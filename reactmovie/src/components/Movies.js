@@ -7,15 +7,9 @@ function Movies({CoverImage,title,summary,genres,id}){
     return (
         <div>
           <div className='movie'>
-              <Link to={`/movie/${id}`}><img src={CoverImage} alt ={title}/></Link>
+              <Link to={`/movie/${id}`}><img src={CoverImage} alt ={title} className='img_main'/></Link>
               <h2 className='title_main'>
                 <Link to={`/movie/${id}`}>{title}</Link></h2>
-              {/* <p>{summary}</p>
-              <ul>
-                {genres.map((g) => (
-                  <li key={g}>{g}</li>
-                ))}
-              </ul> */}
               </div>
             </div>
     );
