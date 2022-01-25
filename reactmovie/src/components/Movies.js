@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Movies({CoverImage,title,summary,genres}){
     return (
         <div>
-              <img src={CoverImage} alt ={title}/>
+              <Link to='/movie'><img src={CoverImage} alt ={title}/></Link>
               <h2>
                 <Link to='/movie'>{title}</Link></h2>
               <p>{summary}</p>
