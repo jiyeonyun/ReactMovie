@@ -9,7 +9,8 @@ function App() {
       <Route path='/movie/:id'>
         <Detail />
       </Route>
-      <Route path="/" element={<Home/>}>
+      <Route path="/">
+        <Home />
       </Route>
     </Switch>
   </Router>
