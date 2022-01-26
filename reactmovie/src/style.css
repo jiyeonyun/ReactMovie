@@ -1,6 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input { 
+
+    -webkit-appearance : none;
+    
+    -moz-appearance:none;
+    
+    appearance:none;
+    
+border: none;
+    }
+input:focus {
+    outline:none;
+    }
+ul {
+    list-style: none;
+}
 a{
     text-decoration: none;
-    color: whitesmoke;
+    color: black;
 }
 button{
     width: 50px;
@@ -8,25 +28,100 @@ button{
 }
 
 body{
-    background: rgb(49, 50, 50);
+    background: whitesmoke;
+}
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.header h1{
+
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.searchBar{
+
+}
+.searchBar form{
+
+}
+.searchBar input{
+    padding-left: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    height: 30px;
+    text-align: center;
+}
+.searchBar button{
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
 }
 /*Home*/
 .main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 
 }
+
+/*slide*/
+.slide{
+    height: 475px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 920px;
+}
+.buttonControl button{
+    border: 2px solid;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.btnLeft{
+    position: absolute;
+    top: 45%;
+    left: 80px;
+  }
+
+.btnRight{
+    position: absolute;
+    top: 45%;
+    right: 80px
+  }
+
 .movie{
     display: flex;
     flex-direction: column;
     width: 230px;
     margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 2x0px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 490px;
 }
 .img_main{
     width: 230px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 .title_main{
     font-size: 15px;
@@ -40,16 +135,6 @@ body{
     margin: 40px;
     font-size: 40px;
     color: whitesmoke;
-}
-.btns_main{
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
-}
-.p_main{
-    color: whitesmoke;
-    font-size: 18px;
-    font-weight: bold;
 }
 .loading{
     display: flex;
