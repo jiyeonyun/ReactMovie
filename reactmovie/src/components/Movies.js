@@ -3,13 +3,20 @@ import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import "../style.css";
 
-function Movies({CoverImage,title,summary,genres,id}){
+function Movies({CoverImage,title,summary,genres,id,year}){
     return (
         <div>
           <div className='movie'>
               <Link to={`/movie/${id}`}><img src={CoverImage} alt ={title} className='img_main'/></Link>
               <h2 className='title_main'>
                 <Link to={`/movie/${id}`}>{title}</Link></h2>
+                <h3>{year}</h3>
+                {/* <p>{summary.length > 235 ? `${summary.slice(0,235)}...` : summary}</p> */}
+                <ul>
+                {genres.map((g) => (
+                  <li key={g}>#{g}</li>
+                ))}
+                </ul>
               </div>
             </div>
     );

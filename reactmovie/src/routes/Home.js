@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react';
 import Movies from '../components/Movies';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Home(){
     const [loading, setLoading] = useState(true);
@@ -26,35 +28,38 @@ function Home(){
           </div>
       ) : (
         <div>
-          <h1 className='h1_main'>🍿Movie recommend(rating {raiting}⬆️)🎬</h1>
-          <div className='btns_main'>
-            <p className='p_main'>change raiting!</p>
-            <button onClick={()=>{
-              setRaiting('8.5')
-              setLoading(true)}}>8.5</button>
-            <button onClick={()=>{
-              setRaiting('8.0')
-              setLoading(true)}}>8.0</button>
-            <button onClick={()=>{
-              setRaiting('7.5')
-              setLoading(true)}}>7.5</button>
-            <button onClick={()=>{
-              setRaiting('7.0')
-              setLoading(true)}}>7.0</button>
-            <button onClick={()=>{
-              setRaiting('8.8')
-              setLoading(true)}}>reset</button>
-          </div>
-          <div className='main'>
+          <nav className='header'>
+            <h1>YunFlix</h1>
+            <ul>
+              <li>High raiting</li>
+              <li>Romance</li>
+              <li>Animaition</li>
+              <li>Thriler</li>
+            </ul>
+            <div className='searchBar'>
+              <form>
+                <input placeholder='Search Movie!'></input>
+                <button><FontAwesomeIcon icon={faSearch} className="search"/></button>
+              </form>
+            </div>
+          </nav>
+          <div className='slide'>
+            <div className='main'>
           {movies.map((movie) =>(
           <Movies 
           key={movie.id}
           id={movie.id}
           CoverImage={movie.medium_cover_image} 
           title={movie.title} 
-          summary={movie.summary} 
+          summary={movie.summary}
+          year={movie.year} 
           genres={movie.genres}/>
           ))}
+          </div>
+        </div>
+        <div className='buttonControl'>
+          <button className='btnLeft'><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
+          <button className='btnRight'><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
         </div>
         </div>
        
