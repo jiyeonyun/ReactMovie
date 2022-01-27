@@ -2,11 +2,17 @@ import { useState,useEffect } from 'react';
 import Movies from '../components/Movies';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import styled from 'styled-components';
 
 function Home(){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
     const [raiting, setRaiting] =useState('8.8');
+    const [x,setX] = useState(0);
+    const click = ()=>{
+      setX(x+460);
+      console.log(x);
+    }
     const getMovies = async () => {
     const json = await (
       await fetch(
@@ -43,8 +49,9 @@ function Home(){
               </form>
             </div>
           </nav>
+          <h1 className='mainh1'>High Raiting</h1>
           <div className='slide'>
-            <div className='main'>
+            <div className='main' style={{transform : `translateX(${x})`}}>
           {movies.map((movie) =>(
           <Movies 
           key={movie.id}
@@ -58,7 +65,7 @@ function Home(){
           </div>
         </div>
         <div className='buttonControl'>
-          <button className='btnLeft'><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
+          <button className='btnLeft' onClick={click}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
           <button className='btnRight'><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
         </div>
         </div>
