@@ -13,13 +13,13 @@ function Home(){
       if(x>=0){
         return;
       }
-      setX(current=> current + 460);
+      setX(current=> current + 465);
     }
     const clickR = ()=>{
       if(x<= -1380){
         return;
       }
-      setX(current => current - 460);
+      setX(current => current - 465);
     }
     const getMovies = async () => {
     const json = await (
