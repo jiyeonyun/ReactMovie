@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
 import Slide from '../components/slide';
+import Romance from '../components/romance';
 
 function Home(){
     const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function Home(){
             </div>
           </nav>
         <Slide movies={movies} />
+        <Romance />
         </div>
       )}
     </div>
