@@ -113,6 +113,17 @@ body{
     right: 80px
   }
 
+  .btnLeft1{
+    position: absolute;
+    top: 65%;
+    left: 80px;
+  }
+
+.btnRight1{
+    position: absolute;
+    top: 65%;
+    right: 80px
+  }
 .movie{
     display: flex;
     flex-direction: column;
@@ -160,4 +171,7 @@ body{
     display: block;
     text-align: center;
     width: 80px;
+}
+.romance{
+    position: relative;
 }
