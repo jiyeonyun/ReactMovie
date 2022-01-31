@@ -123,6 +123,7 @@ body{
     border-radius: 8px;
     overflow: hidden;
     min-height: 490px;
+    min-width: 230px;
 }
 .img_main{
     width: 230px;

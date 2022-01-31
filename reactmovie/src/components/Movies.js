@@ -5,7 +5,6 @@ import "../style.css";
 
 function Movies({CoverImage,title,summary,genres,id,year}){
     return (
-        <div>
           <div className='movie'>
               <Link to={`/movie/${id}`}><img src={CoverImage} alt ={title} className='img_main'/></Link>
               <h2 className='title_main'>
@@ -18,7 +17,6 @@ function Movies({CoverImage,title,summary,genres,id,year}){
                 ))}
                 </ul>
               </div>
-            </div>
     );
 }
 

@@ -9,9 +9,17 @@ function Home(){
     const [movies, setMovies] = useState([]);
     const [raiting, setRaiting] =useState('8.8');
     const [x,setX] = useState(0);
-    const click = ()=>{
-      setX(x+460);
-      console.log(x);
+    const clickL = ()=>{
+      if(x>=0){
+        return;
+      }
+      setX(current=> current + 460);
+    }
+    const clickR = ()=>{
+      if(x<= -1380){
+        return;
+      }
+      setX(current => current - 460);
     }
     const getMovies = async () => {
     const json = await (
@@ -51,7 +59,7 @@ function Home(){
           </nav>
           <h1 className='mainh1'>High Raiting</h1>
           <div className='slide'>
-            <div className='main' style={{transform : `translateX(${x})`}}>
+            <div className='main' style={{transform : `translateX(${x}px)`}}>
           {movies.map((movie) =>(
           <Movies 
           key={movie.id}
@@ -65,8 +73,8 @@ function Home(){
           </div>
         </div>
         <div className='buttonControl'>
-          <button className='btnLeft' onClick={click}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
-          <button className='btnRight'><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
+          <button className='btnLeft' onClick={clickL}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
+          <button className='btnRight' onClick={clickR}><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
         </div>
         </div>
        
