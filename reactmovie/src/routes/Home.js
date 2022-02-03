@@ -1,12 +1,11 @@
 import { useState,useEffect } from 'react';
 import Movies from '../components/Movies';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
 import HighRaiting from '../components/highRaiting';
 import Romance from '../components/romance';
 import Animation from '../components/animation';
 import Music from '../components/music';
+import Header from '../components/header';
 
 function Home(){
     const [loading, setLoading] = useState(true);
@@ -33,21 +32,7 @@ function Home(){
           </div>
       ) : (
         <div>
-          <nav className='header'>
-            <h1>YunFlix</h1>
-            <ul>
-              <li>High raiting</li>
-              <li>Romance</li>
-              <li>Animaition</li>
-              <li>Music</li>
-            </ul>
-            <div className='searchBar'>
-              <form>
-                <input placeholder='Search Movie!'></input>
-                <button><FontAwesomeIcon icon={faSearch} className="search"/></button>
-              </form>
-            </div>
-          </nav>
+        <Header />
         <HighRaiting movies={movies} />
         <Romance />
         <Animation />
