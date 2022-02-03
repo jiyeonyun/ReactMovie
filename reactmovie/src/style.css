@@ -73,7 +73,6 @@ body{
 .main{
     display: flex;
     justify-content: center;
-
 }
 .mainh1{
     display: block;
@@ -82,6 +81,12 @@ body{
     margin-bottom: 40px;
     margin-top: 40px;
     font-size: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 50px;
+}
+.mainh1:hover{
+    font-size: 43px;
 }
 .highRaiting,
 .romance, 
@@ -113,43 +118,23 @@ body{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    translate: all 0.2s;
+}
+.buttonControl button:hover{
+    transform: scale(1.1);
 }
 .btnLeft{
     position: absolute;
-    top: 65%;
-    left: 80px;
-  }
+    top: 50%;
+    left: 100px;
+}
 
 .btnRight{
     position: absolute;
-    top: 65%;
-    right: 80px
-  }
-
-  .btnLeft1{
-    position: absolute;
-    top: 65%;
-    left: 80px;
-  }
-
-.btnRight1{
-    position: absolute;
-    top: 65%;
-    right: 80px
-  }
-.movie{
-    display: flex;
-    flex-direction: column;
-    width: 230px;
-    margin-bottom: 30px;
-    text-align: center;
-    border: 1px solid #000;
-    border-radius: 8px;
-    overflow: hidden;
-    min-height: 500px;
-    min-width: 230px;
-    max-height: 550px;
+    top: 50%;
+    right: 100px
 }
+
 .img_main{
     width: 230px;
     cursor: pointer;
@@ -160,13 +145,6 @@ body{
     font-style: none;
     color: whitesmoke;
     text-align: center;
-}
-.h1_main{
-    display: block;
-    text-align: center;
-    margin: 40px;
-    font-size: 40px;
-    color: whitesmoke;
 }
 .loading{
     display: flex;
@@ -187,3 +165,29 @@ body{
     width: 80px;
 }
 
+/*movie*/
+
+.movie{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 500px;
+    min-width: 230px;
+    max-height: 550px;
+    transition: all 0.2s;
+    background-color: white;
+}
+.movie:hover{
+    transform: translateY(10px);
+}
+.movie h3{
+    font-size: 15px;
+}
+.movie ul{
+    margin-top: 10px;
+}
