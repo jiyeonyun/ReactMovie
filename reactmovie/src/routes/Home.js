@@ -3,9 +3,11 @@ import Movies from '../components/Movies';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
-import Slide from '../components/slide';
+import HighRaiting from '../components/highRaiting';
 import Romance from '../components/romance';
 import Animation from '../components/animation';
+import Music from '../components/music';
+
 function Home(){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
@@ -46,9 +48,10 @@ function Home(){
               </form>
             </div>
           </nav>
-        <Slide movies={movies} />
+        <HighRaiting movies={movies} />
         <Romance />
         <Animation />
+        <Music />
         </div>
       )}
     </div>
