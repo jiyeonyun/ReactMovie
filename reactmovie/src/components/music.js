@@ -8,13 +8,13 @@ import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-s
 import styled from 'styled-components';
 
 
-function Animation(props){
+function Music(props){
     const [movies, setMovies] = useState([]);
     const [raiting, setRaiting] =useState('8.8');
     const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?genre=animation&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?genre=music&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
@@ -37,8 +37,8 @@ function Animation(props){
       setX2(current => current - 464);
     }
     return(
-        <div className='animation'>
-          <h1 className='mainh1'>Animation</h1>
+        <div className='music'>
+          <h1 className='mainh1'>Music</h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(
@@ -61,4 +61,4 @@ function Animation(props){
     )
 }
 
-export default Animation;
+export default Music;
