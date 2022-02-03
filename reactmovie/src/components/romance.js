@@ -19,7 +19,6 @@ function Romance(props){
     ).json();
     setMovies(json.data.movies);
   };
-  console.log(movies);
   useEffect(() => {
     getMovies();
   }, [raiting]);

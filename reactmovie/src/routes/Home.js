@@ -10,11 +10,10 @@ import Header from '../components/header';
 function Home(){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
-    const [raiting, setRaiting] =useState('8.8');
     const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=${raiting}&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
@@ -22,7 +21,7 @@ function Home(){
   };
   useEffect(() => {
     getMovies();
-  }, [raiting]);
+  }, []);
   return (
     <div>
       {loading ? (

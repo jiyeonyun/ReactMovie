@@ -14,12 +14,11 @@ function Animation(props){
     const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?genre=animation&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?genre=Animation&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
   };
-  console.log(movies);
   useEffect(() => {
     getMovies();
   }, [raiting]);

@@ -15,11 +15,9 @@ function Detail(){
             setMovies(json.data.movie);
             setLoading(false);
     };
-    console.log(movies);
     useEffect(()=>{
         getMovie();
     },[]);
-    console.log(movies)
     return(
         <div>
         {loading ? (
