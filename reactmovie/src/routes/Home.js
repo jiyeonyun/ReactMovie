@@ -5,7 +5,7 @@ import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-s
 import styled from 'styled-components';
 import Slide from '../components/slide';
 import Romance from '../components/romance';
-
+import Animation from '../components/animation';
 function Home(){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
@@ -48,6 +48,7 @@ function Home(){
           </nav>
         <Slide movies={movies} />
         <Romance />
+        <Animation />
         </div>
       )}
     </div>
