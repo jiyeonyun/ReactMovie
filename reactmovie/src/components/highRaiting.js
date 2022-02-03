@@ -2,13 +2,13 @@ import App from '../App';
 import { Link } from 'react-router-dom';
 import "../style.css";
 import { useState,useEffect } from 'react';
-import Movies from '../components/Movies';
+import Movies from './Movies';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
 
 
-function Slide(props){
+function HighRaiting(props){
     const [x,setX] = useState(0);
     const clickL = ()=>{
       if(x>=0){
@@ -23,7 +23,7 @@ function Slide(props){
       setX(current => current - 464);
     }
     return(
-        <div>
+        <div className='highRaiting'>
           <h1 className='mainh1'>High Raiting</h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x}px)`}}>
@@ -47,4 +47,4 @@ function Slide(props){
     )
 }
 
-export default Slide;
+export default HighRaiting;
