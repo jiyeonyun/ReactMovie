@@ -38,7 +38,7 @@ function Animation(props){
     }
     return(
         <div className='animation'>
-          <h1 className='mainh1'>Animation</h1>
+          <h1 className='mainh1'>🧸 Animation 🧸</h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(
@@ -54,8 +54,8 @@ function Animation(props){
           </div>
         </div>
         <div className='buttonControl'>
-          <button className='btnLeft1' onClick={clickL}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
-          <button className='btnRight1' onClick={clickR}><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
+          <button className='btnLeft' onClick={clickL}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
+          <button className='btnRight' onClick={clickR}><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
         </div>
         </div>
     )

@@ -38,7 +38,7 @@ function Music(props){
     }
     return(
         <div className='music'>
-          <h1 className='mainh1'>Music</h1>
+          <h1 className='mainh1'>🎼 Music 🎼</h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(
@@ -54,8 +54,8 @@ function Music(props){
           </div>
         </div>
         <div className='buttonControl'>
-          <button className='btnLeft1' onClick={clickL}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
-          <button className='btnRight1' onClick={clickR}><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
+          <button className='btnLeft' onClick={clickL}><FontAwesomeIcon icon={faChevronLeft} className="chevronLeft" size='2x'/></button>
+          <button className='btnRight' onClick={clickR}><FontAwesomeIcon icon={faChevronRight} className="chevronRight" size='2x'/></button>
         </div>
         </div>
     )

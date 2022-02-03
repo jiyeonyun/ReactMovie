@@ -39,7 +39,7 @@ function Home(){
               <li>High raiting</li>
               <li>Romance</li>
               <li>Animaition</li>
-              <li>Thriler</li>
+              <li>Music</li>
             </ul>
             <div className='searchBar'>
               <form>
