@@ -34,11 +34,14 @@ body{
 .header{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     align-items: center;
+    background-color: #eff0f17d;
 }
-
+.header h1{
+    text-shadow: 5px 5px #8c9197;
+}
 .header ul{
     list-style: none;
     display: flex;

@@ -1,0 +1,33 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.detail{
+    height: 100vh;
+}
+.card{
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d8d8d897;
+}
+.card li{
+    font-weight: bold;
+}
+.card img{
+    width: 300px;
+    margin-right: 50px;
+}
+.card p{
+    line-height: 1.5;
+}
+.descCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
