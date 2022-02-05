@@ -7,11 +7,11 @@ function App() {
   return (
   <Router basename={process.env.PUBLIC_URL}>
     <Switch>
+      <Route exact path="/">
+          <Home />
+      </Route>
       <Route path='/movie/:id'>
         <Detail />
-      </Route>
-      <Route path="/">
-        <Home />
       </Route>
       <Route path='/page/:group'>
         <Genre />
