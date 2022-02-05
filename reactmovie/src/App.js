@@ -13,7 +13,7 @@ function App() {
       <Route path='/movie/:id'>
         <Detail />
       </Route>
-      <Route path='/page/:group'>
+      <Route path ='/page/:group/:page'>
         <Genre />
       </Route>
     </Switch>
