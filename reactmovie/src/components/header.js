@@ -20,7 +20,7 @@ function Header(props){
                         return (
                             <div key={key}>
                                 <div className='nav_menus'>
-                                    <Link to={`/page/${Group_obj[key]}`}>{key}</Link>
+                                    <Link to={`/page/${Group_obj[key]}/1`}>{key}</Link>
                                 </div>
                             </div>
                         )
