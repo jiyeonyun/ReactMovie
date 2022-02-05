@@ -44,6 +44,10 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+.header h1 a:hover{
+    color: rgb(193, 48, 22);
+    font-weight: bold;
+}
 .nav_menu{
     display: flex;
     justify-content: space-evenly;
@@ -53,6 +57,10 @@ body{
     padding-left: 20px;
     font-weight: bold;
     font-size: 18px;
+}
+.nav_menus a:hover{
+    color: tomato;
+    font-weight: bold;
 }
 .searchBar{
 
