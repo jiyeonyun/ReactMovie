@@ -39,19 +39,20 @@ body{
     align-items: center;
     background-color: #eff0f17d;
 }
-.header h1{
+.header_h1{
     text-shadow: 5px 5px #8c9197;
-}
-.header ul{
-    list-style: none;
-    display: flex;
-}
-.header ul li{
-    cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
+}
+.nav_menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav_menus{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
 }
 .searchBar{
 

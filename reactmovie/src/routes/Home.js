@@ -1,6 +1,5 @@
 import { useState,useEffect } from 'react';
 import Movies from '../components/Movies';
-import styled from 'styled-components';
 import HighRaiting from '../components/highRaiting';
 import Romance from '../components/romance';
 import Animation from '../components/animation';

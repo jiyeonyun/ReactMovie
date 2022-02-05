@@ -3,20 +3,30 @@ import { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "../style.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Group_obj, Group_key_arr } from "../atom/navbar";
 
 function Header(props){
     return(
         <nav className='header'>
-          <Link to={`/movie`}>
-            <h1>YunFlix</h1>
-            </Link>
-            <ul>
-              <li>High raiting</li>
-              <li>Romance</li>
-              <li>Animaition</li>
-              <li>Music</li>
-            </ul>
+            {/*  Page Name */}
+            <h1 className='header_h1'>
+                <Link to={"/"} >YUNFLEX</Link>
+            </h1>
+            {/* Group Links */}
+            <div className = "nav_menu">
+                {
+                    Group_key_arr.map((key) => {
+                        return (
+                            <div key={key}>
+                                <div className='nav_menus'>
+                                    <Link to={`/page/${Group_obj[key]}`}>{key}</Link>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
             <div className='searchBar'>
               <form>
                 <input placeholder='Search Movie!'></input>

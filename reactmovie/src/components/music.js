@@ -19,7 +19,6 @@ function Music(props){
     ).json();
     setMovies(json.data.movies);
   };
-  console.log(movies);
   useEffect(() => {
     getMovies();
   }, [raiting]);
