@@ -72,9 +72,11 @@
   .g_movie img{
       margin-right: 40px;
       margin-left: 20px;
+      border-radius: 10px;
   }
   .g_movie p{
       margin-top: 30px;
+      line-height: 1.4;
   }
   .g_movie h4{
       margin-top: 10px;
