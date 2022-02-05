@@ -24,7 +24,7 @@ function HighRaiting(props){
     }
     return(
         <div className='highRaiting'>
-          <h1 className='mainh1'>🎬 High Raiting 🎬</h1>
+          <h1 className='mainh1'><Link to={`/page/minimum_rating=8/1`}>🎬 High Raiting 🎬</Link></h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x}px)`}}>
           {props.movies.map((movie) =>(

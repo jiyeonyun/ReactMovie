@@ -33,8 +33,8 @@ function Home(){
         <Header />
         <HighRaiting movies={movies} />
         <Romance />
-        <Animation />
         <Music />
+        <Animation />
         </div>
       )}
     </div>

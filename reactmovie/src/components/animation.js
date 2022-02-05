@@ -37,7 +37,7 @@ function Animation(props){
     }
     return(
         <div className='animation'>
-          <h1 className='mainh1'>🧸 Animation 🧸</h1>
+          <h1 className='mainh1'><Link to={`/page/genre=animation/1`}>🧸 Animation 🧸</Link></h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(

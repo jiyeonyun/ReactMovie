@@ -37,7 +37,7 @@ function Music(props){
     }
     return(
         <div className='music'>
-          <h1 className='mainh1'>🎼 Music 🎼</h1>
+          <h1 className='mainh1'><Link to={`/page/genre=music/1`}>🎼 Music 🎼</Link></h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(

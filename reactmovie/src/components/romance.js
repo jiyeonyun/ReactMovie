@@ -37,7 +37,7 @@ function Romance(props){
     }
     return(
         <div className='romance'>
-          <h1 className='mainh1'>💞 Romance 💞</h1>
+          <h1 className='mainh1'><Link to={`/page/genre=romance/1`}>💞 Romance 💞</Link></h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(
