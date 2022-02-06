@@ -27,13 +27,13 @@ function Music(props){
       if(x2>=0){
         return;
       }
-      setX2(current=> current + 464);
+      setX2(current=> current + 480);
     }
     const clickR = ()=>{
       if(x2<= -1380){
         return;
       }
-      setX2(current => current - 464);
+      setX2(current => current - 480);
     }
     return(
         <div className='music'>

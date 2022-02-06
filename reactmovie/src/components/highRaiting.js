@@ -14,13 +14,13 @@ function HighRaiting(props){
       if(x>=0){
         return;
       }
-      setX(current=> current + 464);
+      setX(current=> current + 480);
     }
     const clickR = ()=>{
       if(x<= -1380){
         return;
       }
-      setX(current => current - 464);
+      setX(current => current - 480);
     }
     return(
         <div className='highRaiting'>
