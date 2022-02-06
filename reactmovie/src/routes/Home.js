@@ -31,10 +31,12 @@ function Home(){
       ) : (
         <div>
         <Header />
+        <div className='contentsWrap'>
         <HighRaiting movies={movies} />
         <Romance />
         <Music />
         <Animation />
+        </div>
         </div>
       )}
     </div>
