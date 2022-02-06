@@ -30,14 +30,22 @@ button{
 body{
     background: whitesmoke;
 }
+nav{
+    transition: .4s ease;
+}
 /*header*/
 .header{
     display: flex;
     justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     align-items: center;
-    background-color: #eff0f17d;
+    position: fixed;
+    background-color: whitesmoke;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
 .header_h1{
     text-shadow: 5px 5px #8c9197;
@@ -82,6 +90,9 @@ body{
     font-size: 18px;
 }
 /*Home*/
+.contentsWrap{
+    margin-top: 140px;
+}
 .main{
     display: flex;
     justify-content: center;
@@ -120,7 +131,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    width: 928px;
+    width: 950px;
 }
 .buttonControl button{
     border: 2px solid;
@@ -185,7 +196,7 @@ body{
     width: 230px;
     margin-bottom: 30px;
     text-align: center;
-    border: 1px solid #000;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);
     border-radius: 8px;
     overflow: hidden;
     min-height: 500px;
@@ -193,6 +204,8 @@ body{
     max-height: 550px;
     transition: all 0.2s;
     background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .movie:hover{
     transform: translateY(10px);
@@ -202,4 +215,19 @@ body{
 }
 .movie ul{
     margin-top: 10px;
+}
+/*header scroll*/
+.headerChange{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    position: fixed;
+    background: rgb(245,245,245);
+    background: linear-gradient(0deg, rgba(245,245,245,1) 11%, rgba(206,219,201,1) 74%, rgba(204,219,198,1) 82%); 
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
