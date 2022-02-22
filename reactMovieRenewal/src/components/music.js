@@ -6,6 +6,7 @@ import Movies from '../components/Movies';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
+import { Group_obj, Group_key_arr } from "../atom/navbar";
 
 
 function Music(props){
@@ -14,7 +15,7 @@ function Music(props){
     const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?genre=music&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?${Group_obj[props.key]}&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
@@ -37,7 +38,7 @@ function Music(props){
     }
     return(
         <div className='music'>
-          <h1 className='mainh1'><Link to={`/page/genre=music/1`}>🎼 Music 🎼</Link></h1>
+          <h1 className='mainh1'><Link to={`/page/genre=music/1`}>{props.key}</Link></h1>
           <div className='slide'>
             <div className='main' style={{transform : `translateX(${x2}px)`}}>
           {movies.map((movie) =>(

@@ -5,7 +5,6 @@ import { useState,useEffect } from 'react';
 import Movies from './Movies';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import styled from 'styled-components';
 
 
 function HighRaiting(props){
