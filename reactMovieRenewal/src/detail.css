@@ -1,0 +1,83 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.detail{
+    height: 100vh;
+}
+.card{
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d8d8d897;
+}
+.card li{
+    font-weight: bold;
+}
+.card img{
+    width: 300px;
+    margin-right: 50px;
+}
+.card p{
+    line-height: 1.5;
+}
+.descCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/*genre*/
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+  }
+  
+  .list {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list a {
+    font-size: 30px;
+  }
+  .list a:hover{
+    color: tomato;
+    font-weight: bold;
+  }
+  .genreWrap{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      justify-content: center;
+
+  }
+  .g_movie{
+      display: flex;
+      width: 500px;
+      padding: 20px;
+      border: 2px solid;
+      margin-bottom: 30px;
+      margin-right: 10px;
+      border-radius: 10px;
+  }
+  .g_movie img{
+      margin-right: 40px;
+      margin-left: 20px;
+      border-radius: 10px;
+  }
+  .g_movie p{
+      margin-top: 30px;
+      line-height: 1.4;
+  }
+  .g_movie h4{
+      margin-top: 10px;
+  }
