@@ -1,28 +1,34 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from './components/header/header';
-import Home from './components/home/home';
+import Home from './routes/home/home';
+import Detail from './routes/detail/detail';
 
 function App() {
   const[movies, setMovies] = useState([]);
-  const genre = ['romance','music','animation','crime','drama'];
+  const[page ,setPage] =useState(0);
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?page=${page}&minimum_rating=8.8&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
 }
-console.log(movies)
 useEffect(()=>{
   getMovies()
-},[])
+  window.scrollTo(0, 0);
+},[page])
 return (
-  <div>
-  <Header genre={genre}/>
-  <Home movies={movies}/>
-  </div>
+  <Router basename={process.env.PUBLIC_URL}>
+  <Switch>
+    <Route exact path="/">
+      <Home movies={movies} page={page} setPage={setPage}/>
+    </Route>
+    <Route path='/movie/:id'>
+      <Detail />
+    </Route>
+  </Switch>
+  </Router>
   );
 }
 
