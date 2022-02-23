@@ -35,5 +35,7 @@
 }
 .listarr:hover{
     transform: scale(1.2);
-    color: tomato;
+    color: rgb(181, 0, 0);
+    -webkit-text-stroke-width: 1.1px;
+	-webkit-text-stroke-color: rgba(230, 230, 230, 0.701);
 }
