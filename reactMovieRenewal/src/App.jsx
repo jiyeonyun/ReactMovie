@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './components/header/header';
+import Home from './components/home/home';
 
 function App() {
   const[movies, setMovies] = useState([]);
@@ -20,6 +21,7 @@ useEffect(()=>{
 return (
   <div>
   <Header genre={genre}/>
+  <Home movies={movies}/>
   </div>
   );
 }
