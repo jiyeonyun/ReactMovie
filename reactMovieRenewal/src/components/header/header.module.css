@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .navbar{
@@ -11,6 +12,15 @@
 .logo{
     margin-left: 1em;
     cursor: pointer;
+    color: rgb(181, 0, 0);
+    font-weight: bold;
+    font-size: 32px;
+    -webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0.701);
+    transition: all 0.5s;
+}
+.logo:hover{
+    transform: scale(1.1);
 }
 .navbar_list{
     display: flex;
