@@ -1,0 +1,30 @@
+.footer{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.page{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.listarr{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.listarr:hover{
+    transform: scale(1.2);
+    color: rgb(181, 0, 0);
+    -webkit-text-stroke-width: 1.1px;
+	-webkit-text-stroke-color: rgba(230, 230, 230, 0.701);
+}
+.genreWrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}

@@ -36,3 +36,9 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+.title{
+    margin-bottom: 10px;
+}
+.des{
+    margin-bottom: 5px;
+}
