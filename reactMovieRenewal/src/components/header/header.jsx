@@ -1,19 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../header/header.module.css';
+
 const Header = () => {
-    const genre = ['romance','music','animation','crime','drama'];
+    const genres = ['romance','music','animation','crime','drama'];
+    
     return(
         <nav className={styles.navbar}>
         <Link to={"/"} >
         <h1 className={styles.logo}>Yun Flix</h1>
         </Link>
         <ul className={styles.navbar_list}>
-            {genre.map(genre => (
-                <li 
-                className={styles.navbar_item}
-                key={genre}>
-                {genre}</li>
+            {genres.map(genre => (
+                <Link to={`/genre/${genre}`}>
+                    <li 
+                    className={styles.navbar_item}
+                    key={genre}
+                    >
+                    {genre}
+                    </li>
+                </Link>
             ))}
         </ul>
                 <form className={styles.form}>
@@ -26,7 +32,6 @@ const Header = () => {
                 </form>
     </nav>
     );
-    
-    };
+};
 
 export default Header;
