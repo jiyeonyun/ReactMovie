@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './routes/home/home';
 import Detail from './routes/detail/detail';
+import Genre from './routes/genre/genre';
 
 function App() {
   const[movies, setMovies] = useState([]);
@@ -20,14 +21,17 @@ useEffect(()=>{
 },[page])
 return (
   <Router basename={process.env.PUBLIC_URL}>
-  <Switch>
-    <Route exact path="/">
-      <Home movies={movies} page={page} setPage={setPage}/>
-    </Route>
-    <Route path='/movie/:id'>
-      <Detail />
-    </Route>
-  </Switch>
+    <Switch>
+      <Route exact path="/">
+        <Home movies={movies} page={page} setPage={setPage}/>
+      </Route>
+      <Route path='/movie/:id'>
+        <Detail />
+      </Route>
+      <Route path='/genre/:genres'>
+        <Genre />
+      </Route>
+    </Switch>
   </Router>
   );
 }
