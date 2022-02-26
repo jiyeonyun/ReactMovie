@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../home/home.module.css'
 import Movieitem from '../../components/movieItem/movieitem';
 const Home = ({movies,page,setPage,search}) => {
-    const List_arr = [1, 2, 3 ,4];
+    const List_arr = [1, 2, 3];
     const onClick = (e)=>{
         setPage(e.target.textContent);
     }
