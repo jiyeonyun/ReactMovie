@@ -4,7 +4,6 @@ import Home from './routes/home/home';
 import Detail from './routes/detail/detail';
 import Genre from './routes/genre/genre';
 import Header from './components/header/header';
-import Search from './routes/search/search';
 
 function App() {
   const[movies, setMovies] = useState([]);
@@ -29,10 +28,10 @@ function App() {
             getMovies()
             setSearch(false)
             window.scrollTo(0, 0);
-        },[page,search])
+        },[page])
 return (
   <Router basename={process.env.PUBLIC_URL}>
-    <Header movieSearch={movieSearch} search={search} setSearch={setSearch}/>
+    <Header movieSearch={movieSearch} setPage={setPage}/>
     <Switch>
       <Route exact path="/">
         <Home movies={movies} page={page} setPage={setPage} search={search} setSearch={setSearch} />
