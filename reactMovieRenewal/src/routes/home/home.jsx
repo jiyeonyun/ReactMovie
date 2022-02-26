@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/header/header';
 import styles from '../home/home.module.css'
 import Movieitem from '../../components/movieItem/movieitem';
 const Home = ({movies,page,setPage}) => {
@@ -9,7 +8,6 @@ const Home = ({movies,page,setPage}) => {
     }
     return(
     <div>
-        <Header/>
         <h1 className={styles.title}>🎬 High raiting Movies 🎬</h1>
         <ul className={styles.movies}>
         {movies.map(movie => (

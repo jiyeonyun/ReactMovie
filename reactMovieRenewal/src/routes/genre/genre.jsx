@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import GenreItem from '../../components/genreItem/genreItem';
-import Header from '../../components/header/header';
 import styles from '../genre/genre.module.css';
 
 function Genre(props){
@@ -25,7 +24,6 @@ function Genre(props){
     
     return(
     <>
-        <Header/>
             <div className={styles.genreWrap}>
                 {movies.map(movie => (
                     <GenreItem key={movie.id} movie={movie}/>

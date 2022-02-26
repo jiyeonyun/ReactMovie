@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import {useParams} from "react-router-dom";
-import Header from '../../components/header/header';
 import styles from '../detail/detail.module.css'
 
 function Detail(){
@@ -19,7 +18,6 @@ function Detail(){
     },[]);
     return(
         <>
-        <Header/>
         <div className={styles.detail} style={{backgroundImage: `url(${movies.background_image})`, backgroundRepeat : 'no-repeat',backgroundSize:'cover'}}>
             <div className={styles.wrap}>
                 <div className={styles.card}>
