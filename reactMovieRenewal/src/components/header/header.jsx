@@ -7,7 +7,6 @@ const Header = (props) => {
     const history = useHistory();
     const genres = ['romance','music','animation','crime','drama'];
     const inputRef = React.createRef();
-    const goHome = props.setSearch(false);
     const onClick = (event)=>{
         event.preventDefault();
         getSearchedMovies();
@@ -28,7 +27,7 @@ const Header = (props) => {
     return(
         <nav className={styles.navbar}>
         <Link to={"/"} >
-        <h1 className={styles.logo} onClick={goHome}>Yun Flix</h1>
+        <h1 className={styles.logo} onClick={()=>window.location.replace("/")}>Yun Flix</h1>
         </Link>
         <ul className={styles.navbar_list}>
             {genres.map(genre => (
