@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../header/header.module.css';
+import { useHistory } from 'react-router-dom';
 
 const Header = (props) => {
+    const history = useHistory();
     const genres = ['romance','music','animation','crime','drama'];
     const inputRef = React.createRef();
+    const goHome = props.setSearch(false);
     const onClick = (event)=>{
         event.preventDefault();
         getSearchedMovies();
@@ -17,6 +20,7 @@ const Header = (props) => {
     }
     const getSearchedMovies = () => {
         const input = inputRef.current.value;
+        history.push('/');
         props.movieSearch(input);
         inputRef.current.value = '';
     };
@@ -24,7 +28,7 @@ const Header = (props) => {
     return(
         <nav className={styles.navbar}>
         <Link to={"/"} >
-        <h1 className={styles.logo}>Yun Flix</h1>
+        <h1 className={styles.logo} onClick={goHome}>Yun Flix</h1>
         </Link>
         <ul className={styles.navbar_list}>
             {genres.map(genre => (
