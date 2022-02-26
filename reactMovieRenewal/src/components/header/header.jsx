@@ -2,9 +2,25 @@ import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../header/header.module.css';
 
-const Header = () => {
+const Header = (props) => {
     const genres = ['romance','music','animation','crime','drama'];
-    
+    const inputRef = React.createRef();
+    const onClick = (event)=>{
+        event.preventDefault();
+        getSearchedMovies();
+    }
+    const onKeyPress = (event)=>{
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            getSearchedMovies();
+        }
+    }
+    const getSearchedMovies = () => {
+        const input = inputRef.current.value;
+        props.movieSearch(input);
+        inputRef.current.value = '';
+    };
+
     return(
         <nav className={styles.navbar}>
         <Link to={"/"} >
@@ -22,14 +38,20 @@ const Header = () => {
                 </Link>
             ))}
         </ul>
-                <form className={styles.form}>
+            <form action="#">
                 <input 
+                    ref={inputRef} 
                     className={styles.input} 
                     type="search" 
-                    placeholder='Search...' 
+                    placeholder='Search...'
+                    onKeyPress={onKeyPress} 
                     />
-                <button className={styles.button} type='submit'>Search</button>
-                </form>
+                <button 
+                    className={styles.button} 
+                    type='submit'
+                    onClick={onClick}
+                    >Search</button>
+            </form>
     </nav>
     );
 };
