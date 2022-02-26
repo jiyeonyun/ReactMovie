@@ -9,6 +9,7 @@ import Search from './routes/search/search';
 function App() {
   const[movies, setMovies] = useState([]);
   const[page ,setPage] =useState(0);
+  const[search,setSearch]=useState(false);
   const getMovies = async () => {
     const json = await (
       await fetch(
@@ -19,29 +20,28 @@ function App() {
       };
   const movieSearch = async (input) => {
         const json = await (
-                await fetch(`https://yts.mx/api/v2/list_movies.json?query_term="${input}"&sort_by=year`)  
+                await fetch(`https://yts.mx/api/v2/list_movies.json?query_term="${input}"&sort_by=year&limit=44`)  
             ).json();
             setMovies(json.data.movies);
+            setSearch(true)
         }
         useEffect(()=>{
             getMovies()
+            setSearch(false)
             window.scrollTo(0, 0);
-        },[page])
+        },[page,search])
 return (
   <Router basename={process.env.PUBLIC_URL}>
-    <Header movieSearch={movieSearch}/>
+    <Header movieSearch={movieSearch} search={search} setSearch={setSearch}/>
     <Switch>
       <Route exact path="/">
-        <Home movies={movies} page={page} setPage={setPage} />
+        <Home movies={movies} page={page} setPage={setPage} search={search} setSearch={setSearch} />
       </Route>
       <Route path='/movie/:id'>
         <Detail />
       </Route>
       <Route path='/genre/:genres'>
         <Genre />
-      </Route>
-      <Route path='/search'>
-        <Search movies={movies} page={page} setPage={setPage}/>
       </Route>
     </Switch>
   </Router>
