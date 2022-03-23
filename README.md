@@ -10,7 +10,10 @@
 <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=Yarn&logoColor=white"/>
 <br>
 <img width="1439" alt="스크린샷 2022-03-23 오후 1 46 44" src="https://user-images.githubusercontent.com/94913420/159626012-b34d5747-854c-48fd-8459-78c9aaf40c66.png">
-
+<br> <br>
+영화앱을 만드는 강의를듣고 페이지가 하나만있는 영화 어플리케이션을 만들게되었습니다.<br>
+저는 무엇을 배우던, 제 방식대로 한번 더 만들어 보는 것이 재밌기 때문에 장르,서치,상세페이지, 그리고 페이지를 추가한 영화 사이트를 만들어 보았습니다.<br>
+처음으로 api를 사용하는것을 배운후 만들어서 제가 직접 코드를 넣지않아도 서버에서 받아올수있다는것이 흥미로웠고, 리액트 라우터를 배우고 써볼수있어 좋은 기회 였던것 같습니다.<br>
 <br> <br> <br> 
 
 ## 상세 페이지
